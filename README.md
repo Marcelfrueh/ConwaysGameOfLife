@@ -56,11 +56,11 @@ Use 0 for dead cells and 1 for living cells.
 
 For example, create a file glider.txt with the following content: 
 
-Plaintext\
 010\
 001\
 111
 
+Save this file into the directory /src/custom_patterns.
 Simply type the file name (e.g., glider.txt) in the startup menu.
 
 **3. Random Pattern**
