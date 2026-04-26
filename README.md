@@ -17,12 +17,15 @@ cd ConwaysGameOfLife
 ```
 
 **2. Create a virtual environment**
+
+Mac/Linux:
 ```bash
-# Mac/Linux:
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
-# Windows:
+Windows:
+```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
@@ -61,7 +64,7 @@ For example, create a file glider.txt with the following content:
 111
 
 Save this file into the directory /src/custom_patterns.
-Simply type the file name (e.g., glider.txt) in the startup menu.
+Then, simply type the file name (e.g., glider.txt) in the startup menu.
 
 **3. Random Pattern**
 
@@ -70,7 +73,7 @@ Just enter the desired width and height of the board. The algorithm will then ra
 ---
 
 ## Testing
-The project includes a test suite that ensures the core rules of Conway's Game of Life (Underpopulation, Survival, Boundaries, etc.) as well as file parsing work correctly.
+The project includes a test suite that ensures the core rules of Conway's Game of Life (underpopulation, survival, boundaries, etc.) as well as file parsing work correctly.
 
 To run the tests, simply type:
 
