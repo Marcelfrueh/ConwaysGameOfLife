@@ -12,7 +12,7 @@
 
 **1. Clone the repository and navigate into ConwaysGameOfLife**
 ```bash
-git clone XXX
+git clone https://github.com/Marcelfrueh/ConwaysGameOfLife.git
 cd ConwaysGameOfLife
 ```
 
@@ -29,7 +29,7 @@ python -m venv .venv
 
 **3. Install project & dependencies**
 ```bash
-pip install -e .
+pip install -e ".[dev]"
 ```
 
 
