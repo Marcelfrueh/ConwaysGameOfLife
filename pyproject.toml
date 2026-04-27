@@ -16,7 +16,7 @@ dev = [
 ]
 
 [project.scripts]
-game-of-life = "game_of_life.game_controller:main"
+game-of-life = "game_of_life.game_runner:main"
 
 [tool.pytest.ini_options]
 pythonpath = "src"
