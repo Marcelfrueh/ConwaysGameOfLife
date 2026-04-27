@@ -12,24 +12,27 @@
 
 **1. Clone the repository and navigate into ConwaysGameOfLife**
 ```bash
-git clone XXX
+git clone https://github.com/Marcelfrueh/ConwaysGameOfLife.git
 cd ConwaysGameOfLife
 ```
 
 **2. Create a virtual environment**
+
+Mac/Linux:
 ```bash
-# Mac/Linux:
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
-# Windows:
+Windows:
+```bash
 python -m venv .venv
 .venv\Scripts\activate
 ```
 
 **3. Install project & dependencies**
 ```bash
-pip install -e .
+pip install -e ".[dev]"
 ```
 
 
@@ -56,12 +59,12 @@ Use 0 for dead cells and 1 for living cells.
 
 For example, create a file glider.txt with the following content: 
 
-Plaintext\
 010\
 001\
 111
 
-Simply type the file name (e.g., glider.txt) in the startup menu.
+Save this file into the directory /src/custom_patterns.
+Then, simply type the file name (e.g., glider.txt) in the startup menu.
 
 **3. Random Pattern**
 
@@ -70,7 +73,7 @@ Just enter the desired width and height of the board. The algorithm will then ra
 ---
 
 ## Testing
-The project includes a test suite that ensures the core rules of Conway's Game of Life (Underpopulation, Survival, Boundaries, etc.) as well as file parsing work correctly.
+The project includes a test suite that ensures the core rules of Conway's Game of Life (underpopulation, survival, boundaries, etc.) as well as file parsing work correctly.
 
 To run the tests, simply type:
 
