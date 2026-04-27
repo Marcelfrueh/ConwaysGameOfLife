@@ -1,9 +1,5 @@
 # Conway's Game of Life
 
-## Features
-* **Three game modes:** Load your own text files, input coordinates, or start with pure chaos (Random).
-* **Interactive controls:** Pause the game in real-time without blocking the console.
-
 ---
 
 ## Installation
