@@ -1,5 +1,5 @@
 from game_of_life.game import Game
-from game_of_life.file_loader import FileLoader
+from game_of_life.pattern_generator import PatternGenerator
 
 def test_underpopulation():
     initial_cells = {(1,1)}
@@ -47,7 +47,7 @@ def test_file_loader_parsing():
         "100"
     ]
 
-    game = FileLoader._parse_file_content(dummy_lines)
+    game = PatternGenerator._parse_file_content(dummy_lines)
     assert game.rows == 3
     assert game.cols == 3
     assert (0,1) in game.cells

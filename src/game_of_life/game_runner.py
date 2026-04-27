@@ -2,21 +2,21 @@ import time
 import os
 from pynput import keyboard
 from game_of_life.game import Game
-from game_of_life.file_loader import FileLoader
+from game_of_life.pattern_generator import PatternGenerator
 from game_of_life.renderer import ConsoleRenderer
 import logging
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-class GameController:
+class GameRunner:
     def __init__(self):
         self._renderer = ConsoleRenderer()
         self._game = None
         self._is_paused = False
         self._tick_rate = 0.5
 
-    def _setup_game(self) -> Game:
+    def _setup_game(self) -> Game | None:
         while True:
             print("\nHow would you like to configure your board?")
             print("[1] Provide coordinates of pattern")
@@ -25,11 +25,11 @@ class GameController:
             choice = input("Choose 1, 2 or 3: ").strip()
 
             if choice == '1':
-                game = FileLoader.from_coordinates()
+                game = PatternGenerator.from_coordinates()
             elif choice == '2':
-                game = FileLoader.from_text_file()
+                game = PatternGenerator.from_text_file()
             elif choice == '3':
-                game = FileLoader.from_random()
+                game = PatternGenerator.from_random()
             else:
                 logger.error("Invalid input! Use 1, 2 or 3.")
                 continue
@@ -64,7 +64,7 @@ class GameController:
 
 
 def main():
-    app = GameController()
+    app = GameRunner()
     app.run()
 
 if __name__ == "__main__":

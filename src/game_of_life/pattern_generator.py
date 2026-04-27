@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 logger = logging.getLogger(__name__)
 
-class FileLoader:
+class PatternGenerator:
 
     @staticmethod
     def from_text_file() -> Game:
@@ -20,7 +20,7 @@ class FileLoader:
                 with open(filepath, 'r') as file:
                     lines = [line.strip() for line in file.readlines() if line.strip()]
 
-                game = FileLoader._parse_file_content(lines)
+                game = PatternGenerator._parse_file_content(lines)
 
                 if game is not None:
                     return game
@@ -60,7 +60,7 @@ class FileLoader:
             print("\n Please provide the coordinates for your cell configurations.")
             print("Format: Row, Column (separated by space, e.g.: '1,2 2,2 3,2')")
             user_input = input("> ").strip()
-            game = FileLoader._parse_coordinates(user_input, rows, cols)
+            game = PatternGenerator._parse_coordinates(user_input, rows, cols)
 
             if game is not None:
                 return game
