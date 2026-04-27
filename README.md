@@ -9,6 +9,8 @@
 **1. Clone the repository and navigate into ConwaysGameOfLife**
 ```bash
 git clone https://github.com/Marcelfrueh/ConwaysGameOfLife.git
+```
+```bash
 cd ConwaysGameOfLife
 ```
 
