@@ -16,7 +16,8 @@ class GameRunner:
         self._is_paused = False
         self._tick_rate = 0.5
 
-    def _setup_game(self) -> Game | None:
+    @staticmethod
+    def _setup_game() -> Game | None:
         while True:
             print("\nHow would you like to configure your board?")
             print("[1] Provide coordinates of pattern")

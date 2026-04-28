@@ -6,11 +6,12 @@ class ConsoleRenderer:
         self.alive_char = alive_char
         self.dead_char = dead_char
 
-    def clear_console(self):
+    @staticmethod
+    def _clear_console():
         os.system('cls' if os.name == 'nt' else 'clear')
 
     def render(self, game: Game):
-        self.clear_console()
+        self._clear_console()
         print(f"=== Generation: {game.generation} ===")
 
         for row in range(game.rows):
