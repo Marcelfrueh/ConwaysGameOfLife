@@ -78,3 +78,7 @@ To run the tests, simply type:
 ```bash
 pytest
 ```
+or 
+```bash
+pytest -v
+```
